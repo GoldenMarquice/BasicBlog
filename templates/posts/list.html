@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Post {% endblock title %}
+
+{% block content %}
+
+{% for post in post_list %}
+<h1> Post</h1>
+<div class="card-container">
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{% static 'img/images (1).jpeg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" >{{ post.title }}</h5>
+      <p class="card-text" >  {{ post.subtitle }} </p>
+      <p> {{ post.body | truncatechars:128 }}</p>
+      <a href="{% url 'detail' post.id %}" class="btn btn-primary"> Continue Reading...</a>
+    </div>
+  </div>
+</div>
+  {% endfor %}
+
+{% endblock content %}

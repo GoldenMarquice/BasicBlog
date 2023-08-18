@@ -1,0 +1,21 @@
+h1{
+    color:black;
+
+}
+
+#images{
+    border-radius: 5px;
+    width:30%;
+}
+
+.card-container{
+    background-color: bisque;
+}
+
+.card{
+    background-color: black;
+    color: silver;
+    flex: auto;
+    display: flex;
+    justify-content: space-between; 
+}
